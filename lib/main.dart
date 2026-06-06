@@ -90,7 +90,7 @@ class _mainPageState extends State<mainPage> {
 
     final List<double> fftResult = outputPtr.asTypedList(n ~/ 2).toList();
     setState(() {
-      this.spectrumData = fftResult;
+      spectrumData = fftResult;
     });
 
     final now = DateTime.now();
@@ -228,7 +228,7 @@ class _mainPageState extends State<mainPage> {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
             child: Row(
               children: [
-                Container(
+                SizedBox(
                   width: 70,
                   child: Text("${hz}Hz", style: TextStyle(fontSize: 12)),
                 ),
